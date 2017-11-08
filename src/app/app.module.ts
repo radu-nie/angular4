@@ -4,7 +4,9 @@ import { AppComponent } from './components/app/app.component';
 import { RouterModule } from '@angular/router';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { HomeComponent } from './home/home.component';
+import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
+import { HeroesComponent } from './components/heroes/heroes.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -12,13 +14,12 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     NavBarComponent,
     PageNotFoundComponent,
-    HomeComponent
+    HeroDetailComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent}
-    ])
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
