@@ -1,22 +1,25 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">
+      <img src="https://salesoffice.allianztiriac.ro/assets/img/sm_allianz_logo.svg">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <button (click)="logout()" class="btn btn-icon"><i class="fa fa-sign-out"></i></button>          
+        </li>                
+        <li class="nav-item">
+          <button (click)="clearCache()" ng-show="canLogout" class="btn btn-icon"><i class="fa fa-refresh"></i></button>
+        </li>        
+      </ul>
+    </div>
+
+    <div class="navbar-user ng-scope">
+        <p id="profile" ng-init="pc.username = 'Va rugam logati-va' " class="ng-binding"><span class="profile-badge" text="cf test" badge-count="badgeCount" style="background-color: rgb(192, 57, 43);">ct</span>cf test</p>
+    </div>
   </div>
 </nav>

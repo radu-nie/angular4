@@ -1,15 +1,16 @@
-<div *ngIf="hero">
-  <h1>
-    Fraiereee, merge!
-  </h1>
-  <br>
-  <h2>{{ hero.name | uppercase }} Details</h2>
-  <div>
-    <span>id: </span>{{hero.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name" />
-    </label>
-  </div>
-
+<div class="row home-row">
+    <div class="card">
+        <div class="card-body">
+          <div *ngIf="hero">
+            <h2>{{ hero.name | uppercase }} Details</h2>
+            <div><span>id: </span>{{hero.id}}</div>
+            <div>
+              <label>name:
+                <input [(ngModel)]="hero.name" placeholder="name"/>
+              </label>
+            </div>
+            <button (click)="goBack()">go back</button>
+          </div>
+        </div>
+    </div>
 </div>

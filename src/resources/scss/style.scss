@@ -1,5 +1,6 @@
 @import './variables';
 @import './mixins';
+@import './fonts';
 @import 
 '~bootstrap/scss/functions',
 '~bootstrap/scss/variables',
@@ -9,5 +10,39 @@
 '~bootstrap/scss/type';
 
 body {
-    background: $white;
+    background: $blue-allianz;
 }
+
+a {
+    -webkit-transition: border .15s linear,color .15s linear,background-color .15s linear;
+    transition: border .15s linear,color .15s linear,background-color .15s linear;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+.container {
+    padding: 70px 30px 15px;
+}
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn {
+    border-width: 2px;
+    background-color: transparent;
+    opacity: .8;
+    filter: alpha(opacity=80);
+    padding: 8px 16px;
+    border-color: #ebebeb;
+    color: #888;
+    cursor: pointer;
+}
+
+.home-container {
+    
+    .row.home-row {
+        margin-top: 50px;
+    }
+}
+

@@ -12,4 +12,11 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
   }
 
+  logout(): void {
+    confirm('Sigur ca te deloghezi ?')
+  }
+
+  clearCache(): void {
+
+  }
 }
